@@ -4,21 +4,21 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 
 function getEmailData() {
-  let dirname = ".preview";
+  let dirname = '.preview';
 
-  if (!fs.existsSync(dirname + "/subject.txt"))
-    throw("File subject.txt not found");
+  if (!fs.existsSync(dirname + '/subject.txt'))
+    throw('File subject.txt not found');
 
-  if (!fs.existsSync(dirname + "/html.html"))
-    throw("File html.html not found");
+  if (!fs.existsSync(dirname + '/html.html'))
+    throw('File html.html not found');
 
-  if (!fs.existsSync(dirname + "/text.txt"))
-    throw("File text.txt not found");
+  if (!fs.existsSync(dirname + '/text.txt'))
+    throw('File text.txt not found');
 
   return {
-    subject: fs.readFileSync(dirname + "/subject.txt", "utf-8"),
-    text: fs.readFileSync(dirname + "/text.txt", "utf-8"),
-    html: fs.readFileSync(dirname + "/html.html", "utf-8")
+    subject: fs.readFileSync(dirname + '/subject.txt', 'utf-8'),
+    text: fs.readFileSync(dirname + '/text.txt', 'utf-8'),
+    html: fs.readFileSync(dirname + '/html.html', 'utf-8')
   };
 }
 
