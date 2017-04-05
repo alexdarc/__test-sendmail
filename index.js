@@ -3,6 +3,8 @@
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 
+console.log('дичь');
+
 function getEmailData() {
   let dirname = ".preview";
 
